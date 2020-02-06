@@ -1,4 +1,4 @@
-package LinkedList;
+package singlyLinkedList;
 
 public class HeroNode {
     public int id;

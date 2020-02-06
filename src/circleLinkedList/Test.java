@@ -1,4 +1,4 @@
-package CircleLinkedList;
+package circleLinkedList;
 
 public class Test {
 
