@@ -14,13 +14,12 @@ public class SelectSort {
         System.out.println(Arrays.toString(array));
     }
 
-    public static void simpleSelectSort(int[] array){
-        for (int i = 0; i < array.length-1; i++) {
-
+    public static void simpleSelectSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
             int minIndex = i;
             int min = array[i];
-            for (int j = i + 1; j < array.length; j++){
-                if (min > array[j]){
+            for (int j = i + 1; j < array.length; j++) {
+                if (min > array[j]) {
                     min = array[j];
                     minIndex = j;
                 }
@@ -30,18 +29,18 @@ public class SelectSort {
         }
     }
 
-    public static void optimalSelectSort(int[] array){
-        for (int i = 0; i < array.length-1; i++) {
+    public static void optimalSelectSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
 
             int minIndex = i;
             int min = array[i];
-            for (int j = i + 1; j < array.length; j++){
-                if (min > array[j]){
+            for (int j = i + 1; j < array.length; j++) {
+                if (min > array[j]) {
                     min = array[j];
                     minIndex = j;
                 }
             }
-            if (minIndex != i){
+            if (minIndex != i) {
                 array[minIndex] = array[i];
                 array[i] = min;
             }
