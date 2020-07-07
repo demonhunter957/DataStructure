@@ -59,12 +59,12 @@ public class EmployeeLinkedList {
         }
         Employee current = head;
         while (true) {
-            if (null == current.getNext()) {
-                System.out.println("没有此员工数据...");
-                break;
-            }
             if(id == current.getId()){
                 head = current.getNext();
+                break;
+            }
+            if (null == current.getNext()) {
+                System.out.println("没有此员工数据...");
                 break;
             }
             if (id == current.getNext().getId()) {
