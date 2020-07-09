@@ -5,7 +5,7 @@ public class TestBinarySearchTree {
 
     public static void main(String[] args) {
 
-        MyBinarySearchTree binarySearchTree = new MyBinarySearchTree();
+        MyBinaryTree binarySearchTree = new MyBinaryTree();
         int[] array = {7, 3, 10, 12, 5, 1, 9, 2};
         for (int i : array) {
             binarySearchTree.add(new MyNode(i));

@@ -1,6 +1,6 @@
 package binarySearchTree;
 
-public class MyBinarySearchTree {
+public class MyBinaryTree {
 
     private MyNode root;
 
