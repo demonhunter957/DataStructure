@@ -6,11 +6,34 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         int[] arr = {1, 8, 10, 10, 10, 10, 89, 1234};
+
+        int[] arr2 = {1, 3, 8, 10, 11, 67, 100};
 //        int resultIndex = search(123, 0, arr.length, arr);
 //        System.out.println(resultIndex);
-        ArrayList<Integer> result = search2(10, 0, arr.length, arr);
-        System.out.println(result);
+
+        int resultIndex = nonRecursiveSearch(11, arr2);
+        System.out.println(resultIndex);
+
+//        ArrayList<Integer> result = search2(10, 0, arr.length, arr);
+//        System.out.println(result);
     }
+
+    public static int nonRecursiveSearch(int target, int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            if (target == arr[mid]) {
+                return mid;
+            } else if (target < arr[mid]) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
+            }
+        }
+        return -1;
+    }
+
 
     public static int search(int findValue, int left, int right, int[] arr) {
         if (left > right) {
