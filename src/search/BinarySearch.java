@@ -42,9 +42,9 @@ public class BinarySearch {
         int mid = (left + right) / 2;
         int midValue = arr[mid];
         if (midValue < findValue) {
-            return search(findValue, left + 1, right, arr);
+            return search(findValue, mid + 1, right, arr);
         } else if (midValue > findValue) {
-            return search(findValue, left, right - 1, arr);
+            return search(findValue, left, mid - 1, arr);
         } else {
             return mid;
         }
@@ -60,9 +60,9 @@ public class BinarySearch {
         int mid = (left + right) / 2;
         int midValue = arr[mid];
         if (midValue < findValue) {
-            return search2(findValue, left + 1, right, arr);
+            return search2(findValue, mid + 1, right, arr);
         } else if (midValue > findValue) {
-            return search2(findValue, left, right - 1, arr);
+            return search2(findValue, left, mid - 1, arr);
         } else {
             ArrayList<Integer> resultList = new ArrayList<>();
             resultList.add(mid);
